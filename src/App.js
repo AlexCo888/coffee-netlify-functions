@@ -11,7 +11,7 @@ const App = () => {
           I created this website to get familiarize with netlify serverless
           functions in React projects.
         </p>
-        <h3>Exampless:</h3>
+        <h3>Examples:</h3>
         <ul>
           <Link className="link" to="/hello-world">
             Hello World
