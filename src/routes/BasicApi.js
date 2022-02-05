@@ -1,8 +1,9 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
+import Card from "../components/Card";
 
-const HelloWorld = () => {
-  const [text, setText] = useState("");
+const BasicApi = () => {
+  const [fetchedData, setFetchedData] = useState([]);
 
   useEffect(() => {
     fetchData();
@@ -10,24 +11,38 @@ const HelloWorld = () => {
 
   const fetchData = async () => {
     try {
-      // const { data } = await axios.get("/.netlify/functions/hello-world");
-      const { data } = await axios.get("/api/hello-world");
-      setText(data.body);
+      const { data } = await axios.get("/api/basic-api");
+      setFetchedData(data);
     } catch (err) {
-      console.log(err.response.data);
-      setText(err.response.data);
+      setFetchedData(err.response.data);
     }
   };
+
+  const varieties = fetchedData.map((variety) => (
+    <Card
+      key={variety.id}
+      imgUrl={variety.image.url}
+      name={variety.name}
+      description={variety.description}
+    />
+  ));
+
   return (
     <>
       <div className="content">
-        <h1>Hello World</h1>
+        <h1>Basic API - Coffee Varieties</h1>
         <pre
           rel="Javascript"
           class="wp-block-csstricks-code-block  language-css"
           data-line=""
         >
           <code markup="tt" class="language-javascript">
+            <span class="token selector">const</span>{" "}
+            <span class="token punctuation">data</span> =
+            <span class="token node"> require</span>
+            <span class="token node-int">&#40;"../assets/data"</span>&#41;
+            <br />
+            <br />
             <span class="token property">exports.</span>handler{" "}
             <span class="token property">=</span>
             <span class="token punctuation"> async</span>
@@ -43,9 +58,7 @@ const HelloWorld = () => {
             <span class="token property">
               {"   "}body:{" "}
               <span class="token node">
-                <span class="token node-int">
-                  "This is my First Netlify Function Example"
-                </span>
+                JSON.stringify(<span class="token punctuation">data</span>)
               </span>
               ,
             </span>{" "}
@@ -54,10 +67,10 @@ const HelloWorld = () => {
             <br /> &#125;;
           </code>
         </pre>
-        {text && <h3>{text}</h3>}
+        {fetchedData && <div className="cardList">{varieties}</div>}
       </div>
     </>
   );
 };
 
-export default HelloWorld;
+export default BasicApi;

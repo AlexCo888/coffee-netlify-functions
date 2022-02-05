@@ -103,4 +103,110 @@ nav {
   text-decoration: none;
   color: #18a7c0;
   font-weight: 600;
+  display: block;
+  padding-top: 1rem;
+}
+
+pre {
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  clear: both;
+  color: #fff;
+  background: #1b1b1b;
+  padding: 0;
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
+  -ms-word-break: normal;
+  word-break: normal;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  position: relative;
+  line-height: 28px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+pre code {
+  scrollbar-color: #666 #201c29;
+  background: 0 0;
+  white-space: pre;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+  display: block;
+  max-width: 100%;
+  min-width: 100px;
+  font-size: 16px;
+  padding: 15px 20px 12px 22px;
+  line-height: 1.75;
+}
+
+pre[rel]:not([rel=""]):before {
+  font-family: MD Primer Bold, Rubik, Lato, Lucida Grande, Lucida Sans Unicode,
+    Tahoma, Sans-Serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.5rem;
+  content: attr(rel);
+  color: #fff;
+  position: absolute;
+  top: -0.2rem;
+  right: 0.4rem;
+  padding: 0;
+  color: #ff7a18 !important;
+}
+
+.language-javascript {
+  color: #f5d67b;
+}
+
+.token.selector {
+  color: #f5d67b;
+}
+
+.token.punctuation {
+  color: rgb(236, 1, 236);
+}
+
+.token.property {
+  color: #fff;
+}
+
+.token.node {
+  color: #72e0d1;
+}
+.token.node-int {
+  color: rgb(255, 185, 139);
+}
+
+.cardList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  border-radius: 14px;
+  border: 1px solid #e8e8e8;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  font-family: "Karla", "sans-serif";
+  margin: 1rem;
+}
+
+.card img {
+  object-fit: cover;
+  height: 250px;
+}
+
+.card h3,
+.card p {
+  padding: 0.5rem;
+}
+
+.card:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }

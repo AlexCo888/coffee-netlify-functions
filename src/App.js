@@ -16,6 +16,9 @@ const App = () => {
           <Link className="link" to="/hello-world">
             Hello World
           </Link>
+          <Link className="link" to="/basic-api">
+            Basic API - Coffee Varieties
+          </Link>
         </ul>
       </div>
     </div>
