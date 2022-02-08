@@ -1,4 +1,3 @@
-// Make comments can change the hash on Netlify servers and allow to have this app working well
 require("dotenv").config();
 const Airtable = require("airtable-node");
 
@@ -25,6 +24,7 @@ exports.handler = async (event, context) => {
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Headers": "Content-Type",
         "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
+        "Access-Control-Allow-Credentials": true,
       },
       statusCode: 200,
       body: JSON.stringify(varieties),
