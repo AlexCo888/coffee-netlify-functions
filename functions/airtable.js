@@ -1,3 +1,4 @@
+// Make comments can change the hash on Netlify servers and allow to have this app working well
 require("dotenv").config();
 const Airtable = require("airtable-node");
 
