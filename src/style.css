@@ -106,6 +106,16 @@ nav {
   display: block;
   padding-top: 1rem;
 }
+.variety-link {
+  text-decoration: none;
+  color: #191f20;
+  font-weight: 600;
+}
+.variety-link p {
+  text-decoration: none;
+  color: #191f20;
+  font-weight: 400;
+}
 
 pre {
   font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
@@ -167,6 +177,12 @@ pre[rel]:not([rel=""]):before {
 .token.punctuation {
   color: rgb(236, 1, 236);
 }
+.token.punctuation-2 {
+  color: rgb(122, 184, 255);
+}
+.token.punctuation-3 {
+  color: rgb(193, 222, 255);
+}
 
 .token.property {
   color: #fff;
@@ -176,7 +192,10 @@ pre[rel]:not([rel=""]):before {
   color: #72e0d1;
 }
 .token.node-int {
-  color: rgb(255, 185, 139);
+  color: rgb(255, 219, 195);
+}
+.token.node-int-2 {
+  color: rgb(255, 164, 103);
 }
 
 .cardList {

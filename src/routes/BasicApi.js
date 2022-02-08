@@ -20,7 +20,6 @@ const BasicApi = () => {
 
   const varieties = fetchedData.map((variety) => (
     <Card
-      key={variety.id}
       imgUrl={variety.image.url}
       name={variety.name}
       description={variety.description}

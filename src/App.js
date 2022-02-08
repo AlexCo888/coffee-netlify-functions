@@ -19,6 +19,9 @@ const App = () => {
           <Link className="link" to="/basic-api">
             Basic API - Coffee Varieties
           </Link>
+          <Link className="link" to="/airtable">
+            Airtable - Coffee Varieties
+          </Link>
         </ul>
       </div>
     </div>

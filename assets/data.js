@@ -57,7 +57,7 @@ const data = [
   },
   {
     id: nanoid(),
-    name: "Catisic ",
+    name: "Catisic",
     image: {
       url: "https://varieties.worldcoffeeresearch.org/assets/images/plant.png",
     },
