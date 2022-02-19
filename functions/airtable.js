@@ -20,12 +20,6 @@ exports.handler = async (event, context) => {
       return { id, name, description, url };
     });
     return {
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Headers": "Content-Type",
-        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
-        "Access-Control-Allow-Credentials": true,
-      },
       statusCode: 200,
       body: JSON.stringify(varieties),
     };
